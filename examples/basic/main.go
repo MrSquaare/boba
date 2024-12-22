@@ -144,11 +144,11 @@ func newModel() Model {
 
 							options := make([]form.SelectItemProps, len(values))
 
-							for _, v := range values {
-								options = append(options, form.SelectItemProps{
-									Value:     v,
-									Component: component.NewOption(v),
-								})
+							for i, value := range values {
+								options[i] = form.SelectItemProps{
+									Value:     value,
+									Component: component.NewOption(value),
+								}
 							}
 
 							return form.NewSelect(options)
@@ -225,9 +225,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.KeyMsg:
 		switch {
 		case key.Matches(typedMsg, keyMap.Exit):
-			msg = nil
-
 			m.status = StatusError
+
+			return m, tea.Quit
 		}
 	}
 
@@ -262,9 +262,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case StatusLoading:
 		switch msg.(type) {
 		case loadingMsg:
-			msg = nil
-
 			m.status = StatusSuccess
+
+			return m, tea.Quit
 		}
 
 		var cmd tea.Cmd
