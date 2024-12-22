@@ -5,7 +5,6 @@ An experimental TUI form builder Go library
 
 - [About](#about)
 - [Getting started](#getting-started)
-  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Using](#using)
 - [Contributing](#contributing)
@@ -23,12 +22,17 @@ Please check out their project if you are looking for a more stable and feature-
 ### Installation
 
 ```shell script
-go get -u github.com/MrSquaare/boba
+go get -u github.com/MrSquaare/boba@latest
 ```
 
 ## Using
 
 See [examples](examples) for more information.
+
+## Contributing
+
+Bug reports, feature requests, other issues and pull requests are welcome.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## License
 

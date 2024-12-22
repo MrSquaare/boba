@@ -280,7 +280,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 func (m Model) View() string {
 	var s string
 
-	s += headerStyle.Render("examples: simple")
+	s += headerStyle.Render("examples: basic")
 
 	if m.status == StatusForm {
 		s += fmt.Sprintf("\n\n%s", m.form.View())
