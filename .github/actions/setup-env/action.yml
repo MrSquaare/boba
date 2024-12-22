@@ -1,0 +1,14 @@
+name: "Setup environment"
+description: "Setup environment"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Go
+      uses: actions/setup-go@v5
+      with:
+          go-version: stable
+
+    - name: Install dependencies
+      shell: bash
+      run: go mod download
