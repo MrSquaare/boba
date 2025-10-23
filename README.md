@@ -1,5 +1,5 @@
 # boba
-An experimental TUI form builder Go library
+🧪 EXPERIMENT: A TUI form builder Go library
 
 ## Table of Contents
 
